@@ -1,0 +1,48 @@
+.TodoList {
+  padding: 20px;
+  background-color: #f9f9f9; // Цвет фона для всего списка задач
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.Todo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; // Отступы между элементами формы
+
+  input[type='text'],
+  input[type='number'],
+  input[type='file'] {
+    padding: 10px; // Отступы внутри полей ввода
+    border: 1px solid #ccc; // Рамка полей ввода
+    border-radius: 4px; // Скругление углов
+    font-size: 16px; // Размер шрифта
+
+    &:focus {
+      border-color: #007bff; // Цвет рамки при фокусе
+      outline: none; // Убираем стандартный обвод при фокусе
+    }
+  }
+
+  button {
+    padding: 10px; // Отступы внутри кнопки
+    background-color: #007bff; // Цвет фона кнопки
+    color: white; // Цвет текста кнопки
+    border: none; // Убираем рамку
+    border-radius: 4px; // Скругление углов кнопки
+    font-size: 16px; // Размер шрифта
+    cursor: pointer; // Курсор при наведении
+
+    &:hover {
+      background-color: #0056b3; // Цвет фона кнопки при наведении
+    }
+
+    &:disabled {
+      background-color: #ccc; // Цвет фона кнопки, если она отключена
+      cursor: not-allowed; // Курсор при отключенной кнопке
+    }
+  }
+}
